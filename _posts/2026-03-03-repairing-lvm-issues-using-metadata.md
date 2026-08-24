@@ -12,7 +12,6 @@ categories:
 {% raw %}
 
 
-# Repairing LVM Issues by Restoring Metadata
 
 ## Purpose
 
@@ -109,9 +108,7 @@ umount /mnt/lvm-demo
 Restore the selected archive:
 
 ````bash
-vgcfgrestore \
-  -f /etc/lvm/archive/vg_lab_00002-123456789.vg \
-  vg_lab
+vgcfgrestore -f /etc/lvm/archive/vg_lab_00002-123456789.vg vg_lab
 ````
 
 `vgcfgrestore` restores VG and LV metadata, not deleted files or filesystem contents.
