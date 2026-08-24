@@ -2,7 +2,7 @@
 layout: single
 title: "Resolving LUKS Storage Encryption Issues"
 subtitle: ""
-date: 2026-03-03 18:15:00 +0100
+date: 2026-03-06 18:15:00 +0100
 background: '/image/01.jpg'
 tags: ['linux','lvm']
 categories:
