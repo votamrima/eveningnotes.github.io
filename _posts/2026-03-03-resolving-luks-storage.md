@@ -127,8 +127,7 @@ If a key file is configured:
 
 ```bash
 ls -l /root/luks.key
-cryptsetup luksOpen /dev/sdb1 secure_test \
-  --key-file /root/luks.key
+cryptsetup luksOpen /dev/sdb1 secure_test --key-file /root/luks.key
 ```
 
 Close a test mapping when finished:
@@ -231,15 +230,13 @@ Restore a header only when the current header is unusable and the backup is know
 First preserve the current header:
 
 ```bash
-cryptsetup luksHeaderBackup /dev/sdb1 \
-  --header-backup-file /root/luks-header-current.img
+cryptsetup luksHeaderBackup /dev/sdb1 --header-backup-file /root/luks-header-current.img
 ```
 
 Restore the backup:
 
 ```bash
-cryptsetup luksHeaderRestore /dev/sdb1 \
-  --header-backup-file /root/luks-header-sdb1.img
+cryptsetup luksHeaderRestore /dev/sdb1  --header-backup-file /root/luks-header-sdb1.img
 ```
 
 Then try to unlock and mount:
