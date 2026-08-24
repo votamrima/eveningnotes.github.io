@@ -4,7 +4,7 @@ title: "Repairing LVM Issues by Restoring Metadata"
 subtitle: ""
 date: 2026-03-03 18:15:00 +0100
 background: '/image/01.jpg'
-tags: ['linux','lvm']
+tags: ['linux','storage']
 categories:
   - Linux
 ---
