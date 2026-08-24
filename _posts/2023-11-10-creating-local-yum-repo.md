@@ -5,6 +5,8 @@ subtitle: ""
 date: 2023-11-10 18:15:00 +0100
 background: '/image/01.jpg'
 tags: ['linux']
+categories:
+  - Linux
 ---
 
 {% raw %}
