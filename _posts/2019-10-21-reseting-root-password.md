@@ -5,6 +5,8 @@ subtitle: ""
 date: 2019-10-21 13:05:13 +0100
 background: '/img/posts/01.jpg'
 tags: ['linux']
+toc: true
+toc_sticky: true
 categories:
   - Linux
 ---

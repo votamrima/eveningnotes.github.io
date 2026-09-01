@@ -5,6 +5,8 @@ subtitle: ""
 date: 2023-08-29 08:15:00 +0100
 background: '/image/01.jpg'
 tags: ['linux','network']
+toc: true
+toc_sticky: true
 categories:
   - Linux
 ---

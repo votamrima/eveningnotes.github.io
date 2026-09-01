@@ -5,6 +5,10 @@ subtitle: ""
 date: 2024-04-01 18:15:00 +0100
 background: '/image/01.jpg'
 tags: ['linux','bash']
+toc: true
+toc_sticky: true
+categories:
+  - Linux
 ---
 
 {% raw %}

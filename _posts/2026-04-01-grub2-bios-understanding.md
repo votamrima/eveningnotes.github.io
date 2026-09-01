@@ -5,6 +5,8 @@ subtitle: ""
 date: 2026-04-03 18:15:00 +0100
 background: '/image/01.jpg'
 tags: ['linux','storage']
+toc: true
+toc_sticky: true
 categories:
   - Linux
 ---
