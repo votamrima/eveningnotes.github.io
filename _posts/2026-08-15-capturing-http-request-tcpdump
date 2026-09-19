@@ -2,7 +2,7 @@
 layout: single
 title: "Capture an Incoming HTTP Request with tcpdump"
 subtitle: ""
-date: 2026-04-06 18:15:00 +0100
+date: 2026-08-18 18:15:00 +0100
 background: '/image/01.jpg'
 tags: ['linux']
 toc: true
