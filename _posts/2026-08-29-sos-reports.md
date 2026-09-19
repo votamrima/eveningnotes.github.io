@@ -19,27 +19,27 @@ categories:
 
 Install if needed:
 
-```bash
+````bash
 dnf install -y sos
-```
+````
 
 Create report:
 
-```bash
+````bash
 sos report
-```
+````
 
 Non-interactive:
 
-```bash
+````bash
 sos report --batch
-```
+````
 
 Find the result:
 
-```bash
+````bash
 ls -lh /var/tmp/sosreport*
-```
+````
 
 ---
 
@@ -47,53 +47,53 @@ ls -lh /var/tmp/sosreport*
 
 List available plugins:
 
-```bash
+````bash
 sos report --list-plugins
-```
+````
 
 Run only the filesystem plugin:
 
-```bash
+````bash
 sos report --batch --only-plugins filesys
-```
+````
 
 Useful short form:
 
-```bash
+````bash
 sos report --batch -o filesys
-```
+````
 
 Plugin-specific options are enabled with `-k plugin.option`. ([GitExtract][2])
 
 For detailed **ext2/ext3/ext4** information:
 
-```bash
+````bash
 sos report --batch \
   -o filesys \
   -k filesys.dumpe2fs
-```
+````
 
 `dumpe2fs` reads ext2/ext3/ext4 filesystem metadata. ([man7.org][3])
 
 Before collecting, identify the filesystems:
 
-```bash
+````bash
 findmnt
-```
+````
 
 Only ext4:
 
-```bash
+````bash
 findmnt -t ext4
-```
+````
 
 Example:
 
-```text
+````text
 /       /dev/mapper/rhel-root ext4
 /boot   /dev/sda2            ext4
 /data   /dev/sdb1            ext4
-```
+````
 
 ---
 
@@ -101,41 +101,41 @@ Example:
 
 First find the device behind `/boot`:
 
-```bash
+````bash
 findmnt -no SOURCE /boot
-```
+````
 
 Example:
 
-```text
+````text
 /dev/sda2
-```
+````
 
 Generate filesystem information but skip `dumpe2fs` for that device:
 
-```bash
+````bash
 sos report --batch \
   -o filesys \
   -k filesys.dumpe2fs \
   --skip-commands='*dumpe2fs*/dev/sda2*'
-```
+````
 
 `--skip-commands` supports shell-style wildcard matching. ([Debian Manpages][4])
 
 A reusable version:
 
-```bash
+````bash
 BOOTDEV=$(findmnt -no SOURCE /boot)
 
 sos report --batch \
   -o filesys \
   -k filesys.dumpe2fs \
   --skip-commands="*dumpe2fs*${BOOTDEV}*"
-```
+````
 
 ### Key idea
 
-```text
+````text
 Full system:
 sos report
 
@@ -147,11 +147,11 @@ Extra plugin data:
 
 Exclude something:
 --skip-commands='pattern'
-```
+````
 
 For filesystem troubleshooting:
 
-```text
+````text
 findmnt
    ↓
 identify devices
@@ -161,7 +161,7 @@ identify devices
 -k filesys.dumpe2fs
    ↓
 skip unwanted devices
-```
+````
 
 [1]: https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/getting_the_most_from_your_support_experience/generating-an-sos-report-for-technical-support_getting-the-most-from-your-support-experience?utm_source=chatgpt.com "Chapter 1. Generating an sos report for technical support | Getting the most from your Support experience | Red Hat Enterprise Linux | 9 | Red Hat Documentation"
 [2]: https://gitextract.com/sosreport/sos?utm_source=chatgpt.com "Full Code of sosreport/sos for AI - Complete Repository Source | GitExtract"
