@@ -71,7 +71,7 @@ Example:
 POST / HTTP/1.1
 Host: serverb
 
-password=EX342Secret
+password=Secret
 ````
 
 ### Home-lab simulation
@@ -80,7 +80,7 @@ On `servera`:
 
 ````bash
 while true; do
-    curl -d 'password=EX342Secret' http://serverb:8080/
+    curl -d 'password=Secret' http://serverb:8080/
     sleep 60
 done
 ````

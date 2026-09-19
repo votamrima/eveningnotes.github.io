@@ -24,7 +24,11 @@ Downloading rpm package using yum
 yum install vim --downloadonly --destdir 
 ````
 
-Checking 
+Quering the list of installable files in the application:
+
+````bash
+rpm -qlp vim-enhanced-8.0.1763-31.el8_10.x86_64.rpm
+````
 
 
 
