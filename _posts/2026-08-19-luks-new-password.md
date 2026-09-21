@@ -55,7 +55,7 @@ Enter:
 OldPass123
 ```
 
-Now simulate the exam situation:
+Now simulate the  situation:
 
 ```text
 encrypted.img   # encrypted file
