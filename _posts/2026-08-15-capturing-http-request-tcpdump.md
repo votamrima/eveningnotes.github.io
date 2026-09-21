@@ -19,7 +19,7 @@ categories:
 
 ````text
 servera  ─── HTTP request ───►  serverb
-          password=...
+          ...
 ````
 
 `servera` sends an HTTP request periodically to `serverb`.
@@ -71,7 +71,7 @@ Example:
 POST / HTTP/1.1
 Host: serverb
 
-password=Secret
+Secret
 ````
 
 ### Home-lab simulation
@@ -80,7 +80,7 @@ On `servera`:
 
 ````bash
 while true; do
-    curl -d 'password=Secret' http://serverb:8080/
+    curl -d 'Secret' http://serverb:8080/
     sleep 60
 done
 ````
